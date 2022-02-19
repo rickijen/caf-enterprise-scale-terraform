@@ -1,0 +1,16 @@
+{
+    "exclude_es_landing_zones": {
+      "policy_assignments": [
+        "Deny-Priv-Escalation-AKS",
+        "Deny-Priv-Containers-AKS",
+        "Deny-http-Ingress-AKS"
+      ],
+      "policy_definitions": [],
+      "policy_set_definitions": [],
+      "role_definitions": [],
+      "archetype_config": {
+        "parameters": {},
+        "access_control": {}
+      }
+    }
+}
