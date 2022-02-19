@@ -80,7 +80,7 @@ locals {
       dns = {
         enabled = true
         config = {
-          location = null
+          location = var.connectivity_resources_location
           enable_private_link_by_service = {
             azure_automation_webhook             = true
             azure_automation_dscandhybridworker  = true
@@ -128,7 +128,7 @@ locals {
           public_dns_zones                                       = []
           private_dns_zones                                      = []
           enable_private_dns_zone_virtual_network_link_on_hubs   = false
-          enable_private_dns_zone_virtual_network_link_on_spokes = false
+          enable_private_dns_zone_virtual_network_link_on_spokes = true
         }
       }
     }
