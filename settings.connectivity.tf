@@ -110,7 +110,7 @@ locals {
             azure_site_recovery                  = true
             azure_event_hubs_namespace           = true
             azure_service_bus_namespace          = true
-            azure_iot_hub                        = true
+            azure_iot_hub                        = false
             azure_relay_namespace                = true
             azure_event_grid_topic               = true
             azure_event_grid_domain              = true
@@ -127,7 +127,7 @@ locals {
           private_link_locations                                 = []
           public_dns_zones                                       = []
           private_dns_zones                                      = []
-          enable_private_dns_zone_virtual_network_link_on_hubs   = false
+          enable_private_dns_zone_virtual_network_link_on_hubs   = true
           enable_private_dns_zone_virtual_network_link_on_spokes = true
         }
       }
