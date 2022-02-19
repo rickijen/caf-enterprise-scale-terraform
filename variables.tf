@@ -97,3 +97,16 @@ variable "management_resources_tags" {
     resource_type = "management"
   }
 }
+
+#
+# Landing Zones
+#
+variable "landingzone_prod_resources_location" {
+  type    = string
+  default = "westus2"
+}
+
+variable "landingzone_dev_resources_location" {
+  type    = string
+  default = "westus2"
+}
