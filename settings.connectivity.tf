@@ -4,10 +4,10 @@ locals {
     settings = {
       hub_networks = [
         {
-          enabled = true
+          enabled = false
           config = {
             address_space                = ["10.100.0.0/16", ]
-            location                     = "northeurope"
+            location                     = var.connectivity_resources_location_paired
             link_to_ddos_protection_plan = true
             dns_servers                  = []
             bgp_community                = ""
@@ -40,7 +40,7 @@ locals {
           enabled = true
           config = {
             address_space                = ["10.101.0.0/16", ]
-            location                     = "westeurope"
+            location                     = var.connectivity_resources_location
             link_to_ddos_protection_plan = true
             dns_servers                  = []
             bgp_community                = ""
@@ -54,9 +54,9 @@ locals {
               }
             }
             azure_firewall = {
-              enabled = false
+              enabled = true
               config = {
-                address_prefix   = ""
+                address_prefix   = "10.101.0.0/24"
                 enable_dns_proxy = true
                 availability_zones = {
                   zone_1 = true
@@ -74,7 +74,7 @@ locals {
       ddos_protection_plan = {
         enabled = true
         config = {
-          location = "northeurope"
+          location = var.connectivity_resources_location
         }
       }
       dns = {

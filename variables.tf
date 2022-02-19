@@ -58,6 +58,11 @@ variable "connectivity_resources_location" {
   default = "westus2"
 }
 
+variable "connectivity_resources_location_paired" {
+  type    = string
+  default = "westcentralus"
+}
+
 variable "connectivity_resources_tags" {
   type = map(string)
   default = {
