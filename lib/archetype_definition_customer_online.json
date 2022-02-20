@@ -1,6 +1,6 @@
 {
     "customer_online": {
-      "policy_assignments": ["Deny-Resource-Locations", "Deny-RSG-Locations"],
+      "policy_assignments": [],
       "policy_definitions": [],
       "policy_set_definitions": [],
       "role_definitions": [],
